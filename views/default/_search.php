@@ -27,11 +27,11 @@ use yii\bootstrap\ActiveForm;
     <?= $form->field($model, 'bmm_code') ?>
 
     <?php //print_r($tlist);exit();
-    echo $form->field($model, 'bmm_tid')->dropDownList($tlist);
+    echo $form->field($model, 'bmm_tid')->dropDownList($tlist, ['prompt'=>'-- ทั้งหมด --']);
     ?>
 
     <?php
-    echo $form->field($model, 'bmm_bid')->dropDownList($blist);
+    echo $form->field($model, 'bmm_bid')->dropDownList($blist, ['prompt'=>'-- ทั้งหมด --']);
     ?>
 
     <?= $form->field($model, 'bmm_title') ?>
@@ -41,7 +41,7 @@ use yii\bootstrap\ActiveForm;
     <?php echo $form->field($model, 'bmm_eduyear') ?>
 
     <?php
-    echo $form->field($model, 'bmm_location')->dropDownList($llist);
+    echo $form->field($model, 'bmm_location')->dropDownList($llist, ['prompt'=>'-- ทั้งหมด --']);
     ?>
 
     <?php // echo $form->field($model, 'bmm_author') ?>

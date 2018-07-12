@@ -165,13 +165,10 @@ $this->registerJs($js);
         .nav-main-backend{
 		    display : none; 
 		}
-		.mywrap{
-		    margin-top: -50px;
-        }
      ");
     ?>
 </head>
-<body>
+<body style="margin-top: 0px;">
 <?php $this->beginBody() ?>
 <?php
 $modul = \Yii::$app->controller->module;

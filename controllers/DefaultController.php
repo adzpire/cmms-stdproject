@@ -56,6 +56,14 @@ class DefaultController extends Controller
         ]);
     }
 
+    public function actionDownload($id)
+    {
+        $file = $this->findModel($id)->bmm_file;
+        $storagePath = Yii::getAlias('@uploads/spd_files/');
+
+        return \Yii::$app->response->sendFile(Yii::getAlias("$storagePath/$file"));
+    }
+
     public function actionView($id)
     {
         $model = $this->findModel($id);
